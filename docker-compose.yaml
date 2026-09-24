@@ -1,0 +1,8 @@
+services:
+  script:
+    build: .
+    image: my-script
+    container_name: my-script-runner
+    command: ["${USERNAME:-guest}"]
+    volumes:
+      - ./data:/root
